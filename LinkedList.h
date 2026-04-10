@@ -33,9 +33,9 @@ public:
     LinkedList<T>* GetSubList(int startIndex, int endIndex) const;
     int GetLength() const;
 
-    void Append(T item);
-    void Prepend(T item);
-    void InsertAt(T item, int index);
+    void Append(const T& item);
+    void Prepend(const T& item);
+    void InsertAt(const T& item, int index);
     LinkedList<T>* Concat(LinkedList<T>* list);
     void Clear();
 };
