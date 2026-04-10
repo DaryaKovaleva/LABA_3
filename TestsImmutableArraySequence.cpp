@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Tests.h"
+#include "ImmutableArraySequence.h"
 
 using namespace std;
 
