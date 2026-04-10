@@ -1,6 +1,6 @@
 #include <iostream>
 #include <string>
-#include "Tests.h"
+#include "TestsLib.h"
 
 using namespace std;
 
