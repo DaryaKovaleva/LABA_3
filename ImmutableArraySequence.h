@@ -12,17 +12,17 @@ public:
     explicit ImmutableArraySequence(const DynamicArray<T>&  array);
 
     // Запрещаем изменяющие операции
-    void Append(T item) override;
-    void Prepend(T item) override;
-    void InsertAt(T item, int index) override;
+    void Append(const T& item) override;
+    void Prepend(const T& item) override;
+    void InsertAt(const T& item, int index) override;
 
     // === ДОБАВЛЕНО: объявление Clone ===
     Sequence<T>* Clone() const override;
 
     // Immutable версии операций
-    Sequence<T>* AppendImmutable(T item) const;
-    Sequence<T>* PrependImmutable(T item) const;
-    Sequence<T>* InsertAtImmutable(T item, int index) const;
+    Sequence<T>* AppendImmutable(const T& item) const;
+    Sequence<T>* PrependImmutable(const T& item) const;
+    Sequence<T>* InsertAtImmutable(const T& item, int index) const;
 };
 
 #include "ImmutableArraySequence.tpp"
