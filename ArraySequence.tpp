@@ -64,14 +64,14 @@ int ArraySequence<T>::GetLength() const {
 }
 
 template <class T>
-void ArraySequence<T>::Append(T item) {
+void ArraySequence<T>::Append(const T& item) {
     int oldSize = items->GetSize();
     items->Resize(oldSize + 1);
     items->Set(oldSize, item);
 }
 
 template <class T>
-void ArraySequence<T>::Prepend(T item) {
+void ArraySequence<T>::Prepend(const T& item) {
     int oldSize = items->GetSize();
     items->Resize(oldSize + 1);
     
@@ -82,7 +82,7 @@ void ArraySequence<T>::Prepend(T item) {
 }
 
 template <class T>
-void ArraySequence<T>::InsertAt(T item, int index) {
+void ArraySequence<T>::InsertAt(const T& item, int index) {
     if (index < 0 || index > GetLength()) {
         throw std::out_of_range("Index out of range");
     }
