@@ -57,17 +57,17 @@ int ListSequence<T>::GetLength() const {
 }
 
 template <class T>
-void ListSequence<T>::Append(T item) {
+void ListSequence<T>::Append(const T& item) {
     items->Append(item);
 }
 
 template <class T>
-void ListSequence<T>::Prepend(T item) {
+void ListSequence<T>::Prepend(const T& item) {
     items->Prepend(item);
 }
 
 template <class T>
-void ListSequence<T>::InsertAt(T item, int index) {
+void ListSequence<T>::InsertAt(const T& item, int index) {
     items->InsertAt(item, index);
 }
 
@@ -87,7 +87,6 @@ Sequence<T>* ListSequence<T>::CreateEmpty() const {
     return new ListSequence<T>();
 }
 
-// === ДОБАВЛЕНО: реализация Clone для полиморфного копирования ===
 template <class T>
 Sequence<T>* ListSequence<T>::Clone() const {
     return new ListSequence<T>(*this);
