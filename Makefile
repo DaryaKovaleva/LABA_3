@@ -13,25 +13,25 @@ $(TARGET): $(OBJECTS)
 main.o: main.cpp DynamicArray.h LinkedList.h Sequence.h ArraySequence.h ListSequence.h ImmutableArraySequence.h Queue.h Stack.h Deque.h Matrix.h Tests.h
 	$(CXX) $(CXXFLAGS) -c main.cpp
 
-TestsDynamicArray.o: TestsDynamicArray.cpp Tests.h DynamicArray.h
+TestsDynamicArray.o: TestsDynamicArray.cpp TestsLib.h DynamicArray.h
 	$(CXX) $(CXXFLAGS) -c TestsDynamicArray.cpp
 
-TestsLinkedList.o: TestsLinkedList.cpp Tests.h LinkedList.h
+TestsLinkedList.o: TestsLinkedList.cpp TestsLib.h LinkedList.h
 	$(CXX) $(CXXFLAGS) -c TestsLinkedList.cpp
 
-TestsArraySequence.o: TestsArraySequence.cpp Tests.h ArraySequence.h Sequence.h
+TestsArraySequence.o: TestsArraySequence.cpp TestsLib.h ArraySequence.h Sequence.h
 	$(CXX) $(CXXFLAGS) -c TestsArraySequence.cpp
 
-TestsListSequence.o: TestsListSequence.cpp Tests.h ListSequence.h Sequence.h
+TestsListSequence.o: TestsListSequence.cpp TestsLib.h ListSequence.h Sequence.h
 	$(CXX) $(CXXFLAGS) -c TestsListSequence.cpp
 
-TestsImmutableArraySequence.o: TestsImmutableArraySequence.cpp Tests.h ImmutableArraySequence.h ArraySequence.h Sequence.h
+TestsImmutableArraySequence.o: TestsImmutableArraySequence.cpp TestsLib.h ImmutableArraySequence.h ArraySequence.h Sequence.h
 	$(CXX) $(CXXFLAGS) -c TestsImmutableArraySequence.cpp
 
-TestsNew.o: TestsNew.cpp Tests.h Queue.h Stack.h Deque.h Matrix.h
+TestsNew.o: TestsNew.cpp TestsLib.h Queue.h Stack.h Deque.h Matrix.h
 	$(CXX) $(CXXFLAGS) -c TestsNew.cpp
 
-TestsMain.o: TestsMain.cpp Tests.h DynamicArray.h LinkedList.h ArraySequence.h ListSequence.h ImmutableArraySequence.h Queue.h Stack.h Deque.h Matrix.h
+TestsMain.o: TestsMain.cpp TestsLib.h DynamicArray.h LinkedList.h ArraySequence.h ListSequence.h ImmutableArraySequence.h Queue.h Stack.h Deque.h Matrix.h
 	$(CXX) $(CXXFLAGS) -c TestsMain.cpp
 
 clean:
