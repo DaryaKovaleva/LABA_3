@@ -98,7 +98,7 @@ int LinkedList<T>::GetLength() const {
 }
 
 template <class T>
-void LinkedList<T>::Append(T item) {
+void LinkedList<T>::Append(const T& item) {
     Node* newNode = new Node(item);
     
     if (length == 0) {
@@ -112,7 +112,7 @@ void LinkedList<T>::Append(T item) {
 }
 
 template <class T>
-void LinkedList<T>::Prepend(T item) {
+void LinkedList<T>::Prepend(const T& item) {
     Node* newNode = new Node(item);
     
     if (length == 0) {
@@ -126,7 +126,7 @@ void LinkedList<T>::Prepend(T item) {
 }
 
 template <class T>
-void LinkedList<T>::InsertAt(T item, int index) {
+void LinkedList<T>::InsertAt(const T& item, int index) {
     if (index < 0 || index > length) {
         throw std::out_of_range("Index out of range");
     }
