@@ -6,7 +6,7 @@
 
 template <class T>
 class Matrix {
-private: //не должен быть массив массивов (sequence sequence)
+private:
     DynamicArray<DynamicArray<T>> data;
     int rows;
     int cols;
