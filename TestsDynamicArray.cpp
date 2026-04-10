@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Tests.h"
+#include "DynamicArray.h"
 
 using namespace std;
 
