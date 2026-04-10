@@ -9,7 +9,7 @@ public:
     // Виртуальный деструктор
     virtual ~Sequence() {}
 
-    // === Чисто виртуальные методы (интерфейс) ===
+    // (интерфейс)
     
     // Декомпозиция
     virtual T GetFirst() const = 0;
@@ -19,15 +19,15 @@ public:
     virtual int GetLength() const = 0;
 
     // Операции модификации
-    virtual void Append(T item) = 0;
-    virtual void Prepend(T item) = 0;
-    virtual void InsertAt(T item, int index) = 0;
+    virtual void Append(const T& item) = 0;
+    virtual void Prepend(const T& item) = 0;
+    virtual void InsertAt(const T& item, int index) = 0;
     virtual Sequence<T>* Concat(Sequence<T>* list) = 0;
 
     // === Метод для полиморфного копирования (КРИТИЧНО ВАЖНО) ===
     virtual Sequence<T>* Clone() const = 0;
 
-    // === Шаблонные методы (реализация внутри класса) ===
+    // (реализация внутри класса)
     // Они должны быть внутри класса, чтобы компилятор видел их определение
     
     template <typename Func>
@@ -61,7 +61,7 @@ public:
     }
 
 protected:
-    // Фабричный метод для создания пустой последовательности того же типа
+    //для создания пустой последовательности того же типа
     virtual Sequence<T>* CreateEmpty() const = 0;
 };
 
