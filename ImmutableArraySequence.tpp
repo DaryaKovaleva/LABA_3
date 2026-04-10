@@ -20,22 +20,22 @@ ImmutableArraySequence<T>::ImmutableArraySequence(const DynamicArray<T>& array)
     : ArraySequence<T>(array) {}
 
 template <class T>
-void ImmutableArraySequence<T>::Append([[maybe_unused]]T item) {
+void ImmutableArraySequence<T>::Append([[maybe_unused]]const T& item) {
     throw std::runtime_error("Cannot modify immutable sequence");
 }
 
 template <class T>
-void ImmutableArraySequence<T>::Prepend([[maybe_unused]]T item) {
+void ImmutableArraySequence<T>::Prepend([[maybe_unused]]const T& item) {
     throw std::runtime_error("Cannot modify immutable sequence");
 }
 
 template <class T>
-void ImmutableArraySequence<T>::InsertAt([[maybe_unused]]T item, [[maybe_unused]]int index) {
+void ImmutableArraySequence<T>::InsertAt([[maybe_unused]]const T& item, [[maybe_unused]]int index) {
     throw std::runtime_error("Cannot modify immutable sequence");
 }
 
 template <class T>
-Sequence<T>* ImmutableArraySequence<T>::AppendImmutable(T item) const {
+Sequence<T>* ImmutableArraySequence<T>::AppendImmutable(const T& item) const {
     DynamicArray<T>* newArray = new DynamicArray<T>(*(this->items));
     int oldSize = newArray->GetSize();
     newArray->Resize(oldSize + 1);
@@ -44,7 +44,7 @@ Sequence<T>* ImmutableArraySequence<T>::AppendImmutable(T item) const {
 }
 
 template <class T>
-Sequence<T>* ImmutableArraySequence<T>::PrependImmutable(T item) const {
+Sequence<T>* ImmutableArraySequence<T>::PrependImmutable(const T& item) const {
     DynamicArray<T>* newArray = new DynamicArray<T>(this->items->GetSize() + 1);
     newArray->Set(0, item);
     for (int i = 0; i < this->items->GetSize(); i++) {
@@ -54,7 +54,7 @@ Sequence<T>* ImmutableArraySequence<T>::PrependImmutable(T item) const {
 }
 
 template <class T>
-Sequence<T>* ImmutableArraySequence<T>::InsertAtImmutable(T item, int index) const {
+Sequence<T>* ImmutableArraySequence<T>::InsertAtImmutable(const T& item, int index) const {
     if (index < 0 || index > this->GetLength()) {
         throw std::out_of_range("Index out of range");
     }
