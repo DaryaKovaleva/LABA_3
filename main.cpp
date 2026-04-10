@@ -1,5 +1,4 @@
-#include <iostream>
-#include <string>
+#include "Tests.h"
 #include "DynamicArray.h"
 #include "LinkedList.h"
 #include "ArraySequence.h"
@@ -9,7 +8,8 @@
 #include "Stack.h"
 #include "Deque.h"
 #include "Matrix.h"
-#include "Tests.h"
+#include <iostream>
+#include <string>
 
 using namespace std;
 
