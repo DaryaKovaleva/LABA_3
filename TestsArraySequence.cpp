@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Tests.h"
+#include "ArraySequence.h"
 
 using namespace std;
 
