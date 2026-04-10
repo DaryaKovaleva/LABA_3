@@ -22,12 +22,11 @@ public:
     ListSequence<T>* GetSubsequence(int startIndex, int endIndex) const override;
     int GetLength() const override;
 
-    void Append(T item) override;
-    void Prepend(T item) override;
-    void InsertAt(T item, int index) override;
+    void Append(const T& item) override;
+    void Prepend(const T& item) override;
+    void InsertAt(const T& item, int index) override;
     ListSequence<T>* Concat(Sequence<T>* list) override;
 
-    // === ДОБАВЛЕНО: объявление Clone ===
     Sequence<T>* Clone() const override;
 
 protected:
