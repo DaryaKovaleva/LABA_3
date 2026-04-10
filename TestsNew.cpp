@@ -1,6 +1,10 @@
 #include <iostream>
 #include <cmath>
 #include "Tests.h"
+#include "Queue.h"
+#include "Stack.h"
+#include "Deque.h"
+#include "Matrix.h"
 
 using namespace std;
 
