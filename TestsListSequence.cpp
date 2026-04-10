@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Tests.h"
+#include "ListSequence.h"
 
 using namespace std;
 
